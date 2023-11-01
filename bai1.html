@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [1,2,9,10,5,6,7,8]
+        function diemcaothu3(){
+        let max = 0;
+        let max1 = 0;
+        let max2 = 0;
+        let max3=0;
+        let max4= 0;
+        for(let i=0;i<a.length;++i){
+            if(max<a[i]){
+                max=a[i];
+                max1=i;
+            }
+        }
+        a.splice(max1,1);
+        for(let i=0;i<a.length;++i){
+            if(max2<a[i]){
+                max2=a[i];
+                max3=i;
+            }
+        }
+        a.splice(max3,1);
+        for(let i=0;i<a.length;++i){
+            if(max4<a[i]){
+                max4=a[i];
+            }
+        }
+        document.write("Điểm cao thứ 3 của lớp là: "+max4);
+        }
+        diemcaothu3(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tryRemoveFromArray(arr, index) {
+        if (index >= 0 && index < arr.length) {
+            for (let i = index; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+            }
+            arr.length = arr.length - 1; 
+        return arr;
+        }
+    }
+        let myArray = [1, 2, 3, 4, 5];
+        let indexToRemove = 2;
+        let result = tryRemoveFromArray(myArray, indexToRemove);
+        document.write(myArray);
+    </script>
+</body>
+</html>
